@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="conteudo">
+        <div class="conteudo-titulo">
+            <img src="unlock.svg" alt="cadeado fechado">
+            <h2 class="titulo-principal">Gerador de senhas</h2>
+            <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
+        </div>
+
+        <div class="conteudo-senha">
+            <label for="senha">Senha</label>
+            <input name="senha" type="text" id="campo-senha" readonly>
+        </div>
+
+        <div class="parametro">
+            <h3 class="parametro-titulo">Personalize sua senha</h3>
+            <div class="parametro-coluna__senha">
+                <div class="parametro-senha">
+                    <h4>Número de caracteres</h4>
+                    <div class="controle">
+                        <button id="diminuir">-</button>
+                        <span id="tamanho">12</span>
+                        <button id="aumentar">+</button>
+                    </div>
+                </div>
+
+                <div class="parametro-senha">
+                    <h4>Características da senha</h4>
+                    <label><input type="checkbox" id="maiusculas" checked> Letras maiúsculas</label>
+                    <label><input type="checkbox" id="minusculas" checked> Letras minúsculas</label>
+                    <label><input type="checkbox" id="numeros"> Números</label>
+                    <label><input type="checkbox" id="simbolos"> Símbolos</label>
+                </div>
+
+                <div class="parametro-senha">
+                    <h4>Força da senha</h4>
+                    <div id="forca-senha" class="barra-forca"></div>
+                    <div class="legenda">
+                        <span>Fraca</span>
+                        <span>Média</span>
+                        <span>Forte</span>
+                    </div>
+                </div>
+            </div>
+            <button id="gerar-senha">Gerar Senha</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
